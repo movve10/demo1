@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Webbplats</title>
+    <!-- Lägger till Montserrat från Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="assets/images/Ahlfors2.jpg" alt="Ahlfors Design Logo" class="logo-img">
+        <h1>Välkommen till Min Webbplats</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#about">Om</a></li>
+                <li><a href="#contact-form">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Din partner för en bättre webbplats</h2>
+            <p>Detta är hemsektionen.</p>
+        </section>
+        <section id="about">
+            <h2>Om</h2>
+            <p>Detta är omsektionen.</p>
+        </section>
+        <section id="contact-section"> <!-- Här ändrar vi id -->
+            <h2>Kontakt</h2>
+            <p>Detta är kontaktsektionen.</p>
+        </section>
+    </main>
+
+    <footer>
+       
+
+        <!-- Contact Form Section -->
+        <section id="contact-form">
+            <h2>Skicka ett meddelande</h2>
+            <form action="#" method="POST" autocomplete="on">
+                <label for="name">Ditt namn:</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+
+                <label for="email">Din e-post:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+
+                <label for="message">Meddelande:</label>
+                <textarea id="message" name="message" autocomplete="off" required placeholder="Skriv ditt meddelande här..."></textarea>
+
+                <button type="submit">Skicka meddelande</button>
+            </form>
+            <div id="feedback-message" style="display: none; margin-top: 20px; text-align: center; font-size: 18px; color: green;">
+                Tack för ditt meddelande! Vi kommer att svara så snart som möjligt.
+            </div>
+        </section>
+         <!-- Social Media Links -->
+         <section id="social-media">
+            <p>Följ oss på sociala medier:</p>
+            <ul>
+                <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
