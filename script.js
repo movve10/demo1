@@ -21,12 +21,17 @@ form.addEventListener('submit', function (event) {
 
 // Array holding the paths to your 5 video files
 const videos = [
-  'assets/videos/video1_Clouds_Cut.webm',
-  'assets/videos/video2_Powder_Cut.webm',
-  'assets/videos/video3_Meshglobes_Cut.webm',
-  'assets/videos/video4_Sunset_Cut.webm',
-  'assets/videos/video5_Beach_Cut.webm'
+  'assets/videos/video1_Clouds_Cut',
+  'assets/videos/video2_Powder_Cut',
+  'assets/videos/video3_Meshglobes_Cut',
+  'assets/videos/video4_Sunset_Cut',
+  'assets/videos/video5_Beach_Cut'
 ];
+
+// 🔹 Function to determine whether to use `.webm` or `.mp4`
+function getVideoSrc(basePath) {
+  return basePath + (document.createElement('video').canPlayType('video/webm') ? '_webm.webm' : '.mp4');
+}
 
 let currentIndex = 0;
 let activePlayer = 1; // Start with heroVideo1 active
@@ -35,48 +40,30 @@ const video1 = document.getElementById('heroVideo1');
 const video2 = document.getElementById('heroVideo2');
 
 function playVideoSequence() {
-  // Determine active and hidden videos
-  let activeVideo, hiddenVideo;
-  if (activePlayer === 1) {
-    activeVideo = video1;
-    hiddenVideo = video2;
-  } else {
-    activeVideo = video2;
-    hiddenVideo = video1;
-  }
+let activeVideo = activePlayer === 1 ? video1 : video2;
+let hiddenVideo = activePlayer === 1 ? video2 : video1;
 
-  // Determine the next video in the sequence
-  currentIndex = (currentIndex + 1) % videos.length;
-  
-  // Load the next video into the hidden element
-  hiddenVideo.src = videos[currentIndex];
-  hiddenVideo.load();
-  
-  hiddenVideo.onloadeddata = () => {
-    // Start playing the hidden video
-    hiddenVideo.play();
-    
-    // Crossfade: show the hidden video and hide the active one
-    hiddenVideo.style.opacity = 1;
-    activeVideo.style.opacity = 0;
-    
-    // Update activePlayer for next switch
-    activePlayer = activePlayer === 1 ? 2 : 1;
-    
-    // Set timer for next transition (5 seconds)
-    setTimeout(playVideoSequence, 4700);
-  };
+currentIndex = (currentIndex + 1) % videos.length;
+hiddenVideo.src = getVideoSrc(videos[currentIndex]); // ✅ Load the correct format
+
+hiddenVideo.onloadeddata = () => {
+  hiddenVideo.play();
+  hiddenVideo.style.opacity = 1;
+  activeVideo.style.opacity = 0;
+  activePlayer = activePlayer === 1 ? 2 : 1;
+  setTimeout(playVideoSequence, 4700);
+};
 }
 
-// Initialize: load and play the first video in heroVideo1
-video1.src = videos[currentIndex];
+// ✅ Initialize: load and play the first video with correct format
+video1.src = getVideoSrc(videos[currentIndex]);
 video1.play();
 
-// ✅ Force play on mobile browsers
+// ✅ Force autoplay on mobile browsers
 document.addEventListener('DOMContentLoaded', () => {
   video1.play().catch(error => console.log("Autoplay blocked:", error));
   video2.play().catch(error => console.log("Autoplay blocked:", error));
 });
 
-// Start the switching sequence after 4.7 seconds
+// Start the video switching loop after 5 seconds
 setTimeout(playVideoSequence, 4700);
