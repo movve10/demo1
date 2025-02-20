@@ -64,7 +64,7 @@ function playVideoSequence() {
     activePlayer = activePlayer === 1 ? 2 : 1;
     
     // Set timer for next transition (5 seconds)
-    setTimeout(playVideoSequence, 5000);
+    setTimeout(playVideoSequence, 4700);
   };
 }
 
