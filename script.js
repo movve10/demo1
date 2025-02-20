@@ -21,11 +21,11 @@ form.addEventListener('submit', function (event) {
 
 // Array holding the paths to your 5 video files
 const videos = [
-    'assets/videos/video1_flying_above_clouds.mp4',
-    'assets/videos/video2_powder.mp4',
-    'assets/videos/video3_meshglobes.mp4',
-    'assets/videos/video4_Sunset_Ocean.mp4',
-    'assets/videos/video5_Beach_From_Above.mp4'
+  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video1_flying_above_clouds.mp4',
+  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video2_powder.mp4',
+  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video3_meshglobes.mp4',
+  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video4_Sunset_Ocean.mp4',
+  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video5_Beach_From_Above.mp4'
 ];
 
 let currentIndex = 0;
