@@ -21,11 +21,11 @@ form.addEventListener('submit', function (event) {
 
 // Array holding the paths to your 5 video files
 const videos = [
-  'assets/videos/video1_Clouds_Cut',
-  'assets/videos/video2_Powder_Cut',
-  'assets/videos/video3_Meshglobes_Cut',
-  'assets/videos/video4_Sunset_Cut',
-  'assets/videos/video5_Beach_Cut'
+  'assets/videos/Video1_Clouds_Cut',
+  'assets/videos/Video2_Powder_Cut',
+  'assets/videos/Video3_Meshglobes_Cut',
+  'assets/videos/Video4_Sunset_Cut',
+  'assets/videos/Video5_Beach_Cut'
 ];
 
 // 🔹 Function to determine whether to use `.webm` or `.mp4`
