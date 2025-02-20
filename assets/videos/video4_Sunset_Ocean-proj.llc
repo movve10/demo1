@@ -1,0 +1,10 @@
+{
+  version: 1,
+  mediaFileName: 'video4_Sunset_Ocean.mp4',
+  cutSegments: [
+    {
+      end: 9.034025250000001,
+      name: '',
+    },
+  ],
+}

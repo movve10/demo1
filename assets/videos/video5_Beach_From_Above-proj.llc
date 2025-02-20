@@ -1,0 +1,10 @@
+{
+  version: 1,
+  mediaFileName: 'video5_Beach_From_Above.mp4',
+  cutSegments: [
+    {
+      end: 9.46125,
+      name: '',
+    },
+  ],
+}

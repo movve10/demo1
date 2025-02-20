@@ -1,0 +1,10 @@
+{
+  version: 1,
+  mediaFileName: 'video3_meshglobes.mp4',
+  cutSegments: [
+    {
+      end: 9.11165357142857,
+      name: '',
+    },
+  ],
+}

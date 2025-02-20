@@ -1,0 +1,10 @@
+{
+  version: 1,
+  mediaFileName: 'video2_powder.mp4',
+  cutSegments: [
+    {
+      end: 9.186122448979592,
+      name: '',
+    },
+  ],
+}
