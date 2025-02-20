@@ -28,9 +28,9 @@ const videos = [
   'assets/videos/Video5_Beach_Cut'
 ];
 
-// 🔹 Function to determine whether to use `.webm` or `.mp4`
+// Function to determine whether to use `.webm` or `.mp4`
 function getVideoSrc(basePath) {
-  return basePath + (document.createElement('video').canPlayType('video/webm') ? '_webm.webm' : '.mp4');
+    return basePath + (document.createElement('video').canPlayType('video/webm') ? '_webm.webm' : '_Cut_H264.mp4');
 }
 
 let currentIndex = 0;
