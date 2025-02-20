@@ -21,11 +21,11 @@ form.addEventListener('submit', function (event) {
 
 // Array holding the paths to your 5 video files
 const videos = [
-  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video1_flying_above_clouds.mp4',
-  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video2_powder.mp4',
-  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video3_meshglobes.mp4',
-  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video4_Sunset_Ocean.mp4',
-  'https://raw.githubusercontent.com/movve10/demo1/master/assets/videos/video5_Beach_From_Above.mp4'
+  'assets/videos/video1_clouds_cut.mp4',
+  'assets/videos/video2_powder_cut.mp4',
+  'assets/videos/video3_meshglobes_cut.mp4',
+  'assets/videos/video4_Sunset_cut.mp4',
+  'assets/videos/video5_Beach_cut.mp4'
 ];
 
 let currentIndex = 0;
@@ -73,4 +73,4 @@ video1.src = videos[currentIndex];
 video1.play();
 
 // Start the switching sequence after 5 seconds
-setTimeout(playVideoSequence, 5000);
+setTimeout(playVideoSequence, 4700);
