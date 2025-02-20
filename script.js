@@ -21,11 +21,11 @@ form.addEventListener('submit', function (event) {
 
 // Array holding the paths to your 5 video files
 const videos = [
-  'assets/videos/video1_clouds_cut.mp4',
-  'assets/videos/video2_powder_cut.mp4',
-  'assets/videos/video3_meshglobes_cut.mp4',
-  'assets/videos/video4_Sunset_cut.mp4',
-  'assets/videos/video5_Beach_cut.mp4'
+  'assets/videos/video1_Clouds_Cut.webm',
+  'assets/videos/video2_Powder_Cut.webm',
+  'assets/videos/video3_Meshglobes_Cut.webm',
+  'assets/videos/video4_Sunset_Cut.webm',
+  'assets/videos/video5_Beach_Cut.webm'
 ];
 
 let currentIndex = 0;
