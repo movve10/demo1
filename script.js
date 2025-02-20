@@ -72,5 +72,11 @@ function playVideoSequence() {
 video1.src = videos[currentIndex];
 video1.play();
 
-// Start the switching sequence after 5 seconds
+// ✅ Force play on mobile browsers
+document.addEventListener('DOMContentLoaded', () => {
+  video1.play().catch(error => console.log("Autoplay blocked:", error));
+  video2.play().catch(error => console.log("Autoplay blocked:", error));
+});
+
+// Start the switching sequence after 4.7 seconds
 setTimeout(playVideoSequence, 4700);
